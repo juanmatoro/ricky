@@ -1,0 +1,9 @@
+.episodios {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .episodios .list-grou-item {
+    width: calc(25% - 10px); 
+    margin: 5px; 
+  }

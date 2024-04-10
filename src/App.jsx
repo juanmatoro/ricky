@@ -10,6 +10,8 @@ import LocationDetails from "./pages/locations/LocationDetails";
 import LocationsGallery from "./pages/locations/LocationsGallery";
 import Header from "./core/header/Header";
 import Home from "./pages/home/Home";
+import Episodio from "./pages/episodios/Episodio";
+import Episodios from "./pages/episodios/Episodios";
 
 
 function App() {
@@ -25,9 +27,12 @@ function App() {
           <Route path="/character/:id" element={<CharacterDetails />} />
           <Route path="/locations" element={<LocationsGallery/>} />
           <Route path="/location/:id" element={<LocationDetails/>} />
+          <Route path="/episodios"  element={  <Episodios />} />
+          <Route path="/episodio/:id"  element={  <Episodio />} />
 
         </Routes>
-     
+        
+      
       </Router>
 
     </>
