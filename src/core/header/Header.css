@@ -1,0 +1,10 @@
+.container-header {
+    display: flex;
+    background-color: #a6a6a6;
+}
+.logo {
+    max-width: 150px;
+}
+.navbar {
+    width: 100%;
+}
