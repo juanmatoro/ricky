@@ -1,6 +1,7 @@
 .container-footer {
     display: flex;
     align-items: start;
-    background-color: black;
+    background-color: #a6a6a6;
     color: azure;
+    padding: 40px 20px;
 }
