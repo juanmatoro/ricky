@@ -5,6 +5,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Button from "react-bootstrap/Button";
 import axios from "axios";
 import "./Personaje.css";
 
@@ -39,7 +40,7 @@ const CharacterDetails = () => {
   }
 
   return (
-    <Container>
+    <Container className="padd-sup-inf">
       <Row className="container-personaje-principal">
         <Col md="auto" className="container-personaje-imagen">
           <img src={character.image} alt={character.name} />
@@ -53,16 +54,21 @@ const CharacterDetails = () => {
           <p>Localización: {character.location.name}</p>
         </Col>
       </Row>
-      <div className="container-personaj-episodios">
+      <Row>
         <h3>Episodios:</h3>
-        <ListGroup variant="flush" className="episodios">
+        <ListGroup horizontal className="episodios">
           {episodios.map((episodio) => (
             <ListGroup.Item key={episodio.id}>
-              <Link to={`/episodio/${episodio.id}`}>{episodio.name}</Link>
+              <Button
+                variant="outline-secondary"
+                href={`/episodio/${episodio.id}`}
+              >
+                {episodio.name}
+              </Button>
             </ListGroup.Item>
           ))}
         </ListGroup>
-      </div>
+      </Row>
       <p>Created: {character.created}</p>
       <Link to="/personajes">Volver a la galería</Link>
     </Container>

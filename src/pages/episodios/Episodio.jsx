@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { Container, Row, Col, ListGroup } from "react-bootstrap";
 import axios from "axios";
 
 const Episodio = () => {
@@ -28,23 +29,29 @@ const Episodio = () => {
   }, [id]);
 
   return (
-    <div>
+    <Container>
       {episodio && (
-        <>
-          <h2>{episodio.name}</h2>
-          <p>Fecha de estreno: {episodio.air_date}</p>
-          <p>Temporada y número de episodio: {episodio.episode}</p>
-          <p>Personajes:</p>
-          <ul>
-            {personajes.map((personaje) => (
-              <li key={personaje.id}>
-                <Link to={`/character/${personaje.id}`}>{personaje.name}</Link>
-              </li>
-            ))}
-          </ul>
-        </>
+        <Row>
+          <Col>
+            <h2>{episodio.name}</h2>
+            <p>Fecha de estreno: {episodio.air_date}</p>
+            <p>Temporada y número de episodio: {episodio.episode}</p>
+            <p>Personajes:</p>
+          </Col>
+          <Col>
+            <ListGroup variant="flush">
+              {personajes.map((personaje) => (
+                <ListGroup.Item key={personaje.id}>
+                  <Link to={`/character/${personaje.id}`}>
+                    {personaje.name}
+                  </Link>
+                </ListGroup.Item>
+              ))}
+            </ListGroup>
+          </Col>
+        </Row>
       )}
-    </div>
+    </Container>
   );
 };
 

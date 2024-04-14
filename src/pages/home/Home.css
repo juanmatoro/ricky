@@ -6,3 +6,35 @@
     margin: 0 auto;
 max-width: 1440px;
 }
+.introduccion {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px;
+  }
+  
+  .columna-izquierda {
+    width: 45%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .columna-derecha {
+    width: 45%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .columna-izquierda h2, .columna-derecha h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .columna-izquierda p, .columna-derecha p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  

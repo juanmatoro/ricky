@@ -24,7 +24,7 @@ const Episodios = () => {
   }, []); // Ejecutar el efecto solo una vez al montar el componente
 
   return (
-    <Container>
+    <Container className="padd-sup-inf">
       <Row>
         <h2>Los episodios</h2>
         <ListGroup variant="flush">
